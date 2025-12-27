@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Schmutzfahnder | Professionelle Reinigung 2026</title>
+    <meta name="description"
+        content="Die Schmutzfahnder - Ihr professioneller Reinigungsservice in Grainau & Garmisch-Partenkirchen. Modern, gründlich und zuverlässig. Jetzt Angebot anfordern!">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="tracking.css">
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Die Schmutzfahnder Logo">
+            </div>
+            <ul>
+                <li><a href="#services">Leistungen</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#login" class="btn-primary">Mitarbeiter Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Reinheit mit<br><span class="highlight">System & Leidenschaft</span></h1>
+                <p>Der modernste Reinigungsservice für Grainau und Umgebung. Wir fahnden nach jedem Staubkorn.</p>
+                <div class="cta-group">
+                    <a href="#contact" class="btn-primary">Angebot sichern</a>
+                    <a href="#services" class="btn-secondary">Unsere Leistungen</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">Unsere <span class="highlight">Leistungen</span></h2>
+                <div class="services-grid">
+                    <div class="service-card glass-card">
+                        <h3>Privathaushalte</h3>
+                        <p>Gründliche Reinigung Ihrer Wohnräume, Glasreinigung und Wäscheservice.</p>
+                    </div>
+                    <div class="service-card glass-card">
+                        <h3>Gewerbeobjekte</h3>
+                        <p>Büros, Ladenflächen und Treppenhäuser – wir sorgen für einen glänzenden Eindruck.</p>
+                    </div>
+                    <div class="service-card glass-card">
+                        <h3>Spezialreinigung</h3>
+                        <p>Bauendreinigung, Teppich- und Polsterreinigung nach Maß.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="about-flex">
+                    <div class="about-text">
+                        <h2>Über die <span class="highlight">Schmutzfahnder</span></h2>
+                        <p>Seit Jahren sind wir Ihr zuverlässiger Partner in Sachen Sauberkeit. Unser Team arbeitet
+                            diskret, effizient und mit modernstem Equipment.</p>
+                        <p>Tini's Versprechen: Wir finden den Schmutz, bevor Sie es tun.</p>
+                    </div>
+                </div>
+            </div>
+            <section id="login">
+                <div class="container">
+                    <div class="login-card">
+                        <div id="auth-view">
+                            <h2>Mitarbeiter Login</h2>
+                            <div class="form-group">
+                                <label>Personalnummer</label>
+                                <input type="text" id="employee-id" placeholder="SF-123">
+                            </div>
+                            <div class="form-group">
+                                <label>Passwort</label>
+                                <input type="password" id="password">
+                            </div>
+                            <button class="btn-primary" style="width: 100%;" onclick="app.login()">Einloggen</button>
+                        </div>
+
+                        <div id="tracking-view" style="display: none;">
+                            <h2 id="welcome-msg">Hallo, [Name]</h2>
+                            <div id="status" class="status-indicator status-inactive">Ausgestempelt</div>
+
+                            <div class="tracking-controls">
+                                <button id="start-btn" class="btn-primary" onclick="app.start()">Start</button>
+                                <button id="pause-btn" class="btn-secondary" onclick="app.pause()">Pause</button>
+                                <button id="stop-btn" class="btn-secondary"
+                                    style="border-color: #ff5252; color: #ff5252;"
+                                    onclick="app.stop()">Feierabend</button>
+                            </div>
+                            <div id="log"
+                                style="margin-top: 2rem; font-size: 0.9rem; color: #aaa; max-height: 100px; overflow-y: auto;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <script src="tracking.js"></script>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Fragen? <span class="highlight">Kontaktieren Sie uns</span></h2>
+            <div class="glass-card" style="max-width: 600px; margin: 0 auto;">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label style="color: var(--text-main)">Name</label>
+                        <input type="text" placeholder="Ihren Namen eingeben"
+                            style="background: white; border: 1px solid #ddd; color: var(--text-main)">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: var(--text-main)">E-Mail</label>
+                        <input type="email" placeholder="ihre@email.de"
+                            style="background: white; border: 1px solid #ddd; color: var(--text-main)">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: var(--text-main)">Nachricht</label>
+                        <textarea placeholder="Wie können wir Ihnen helfen?"
+                            style="width: 100%; padding: 0.8rem; border-radius: var(--radius-md); border: 1px solid #ddd; background: white; min-height: 100px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Anfrage senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    </main>
+    <script src="tracking.js"></script>
+
+    <footer style="background: var(--bg-dark); color: white; padding: 60px 0 20px;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+                <div style="max-width: 300px;">
+                    <h3>Die Schmutzfahnder</h3>
+                    <p style="color: #aaa; font-size: 0.9rem;">Ihr Profi-Reinigungsservice für Grainau und Umgebung.
+                        Sauberkeit mit Herz und Verstand.</p>
+                </div>
+                <div>
+                    <h4>Links</h4>
+                    <ul style="list-style: none; padding: 0; color: #aaa; font-size: 0.9rem;">
+                        <li><a href="#services" style="color: inherit">Leistungen</a></li>
+                        <li><a href="#login" style="color: inherit">Mitarbeiter Login</a></li>
+                        <li><a href="impressum.html" style="color: inherit">Impressum</a></li>
+                        <li><a href="datenschutz.html" style="color: inherit">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Kontakt</h4>
+                    <p style="color: #aaa; font-size: 0.9rem;">Grainau, Deutschland<br>
+                        info@schmutzfahnder.de</p>
+                </div>
+            </div>
+            <hr style="border: 0; border-top: 1px solid #333; margin: 40px 0 20px;">
+            <p style="text-align: center; color: #666; font-size: 0.8rem;">&copy; 2026 Die Schmutzfahnder. Alle Rechte
+                vorbehalten.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

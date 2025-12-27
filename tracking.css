@@ -1,0 +1,68 @@
+/* Tracking App specific styles */
+#login {
+    background: var(--bg-dark);
+    color: var(--white);
+    padding: 100px 0;
+}
+
+.login-card {
+    max-width: 400px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: var(--radius-md);
+    border: 1px solid #444;
+    background: #222;
+    color: var(--white);
+}
+
+.tracking-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.status-indicator {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.status-active {
+    background: var(--accent);
+    color: var(--bg-dark);
+}
+
+.status-paused {
+    background: var(--secondary);
+    color: var(--bg-dark);
+}
+
+.status-inactive {
+    background: #444;
+    color: var(--white);
+}
