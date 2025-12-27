@@ -4,9 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Die Schmutzfahnder | Professionelle Reinigung 2026</title>
+    <title>Die Schmutzfahnder | Professionelle Reinigung 2026 | Grainau & Garmisch</title>
     <meta name="description"
-        content="Die Schmutzfahnder - Ihr professioneller Reinigungsservice in Grainau & Garmisch-Partenkirchen. Modern, gründlich und zuverlässig. Jetzt Angebot anfordern!">
+        content="Die Schmutzfahnder - Ihr Premium-Reinigungsservice in Grainau & Garmisch-Partenkirchen. Modern, gründlich und zuverlässig mit 2026 Standards. Jetzt Angebot anfordern!">
+
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Die Schmutzfahnder | Professionelle Reinigung 2026">
+    <meta property="og:description"
+        content="Premium-Reinigungsservice in Grainau. Wir finden den Schmutz, bevor Sie es tun.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1738526934153-51c2b2cdd67a?fm=jpg&q=80&w=1200">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="tracking.css">
     <!-- Google Fonts: Outfit -->
@@ -31,32 +39,48 @@
     </header>
 
     <main>
-        <section id="hero">
+        <section id="hero" class="reveal">
             <div class="container">
                 <h1>Reinheit mit<br><span class="highlight">System & Leidenschaft</span></h1>
-                <p>Der modernste Reinigungsservice für Grainau und Umgebung. Wir fahnden nach jedem Staubkorn.</p>
+                <p>Der modernste Reinigungsservice für Grainau und Umgebung. Wir fahnden nach jedem Staubkorn –
+                    gründlich, diskret und professionell.</p>
                 <div class="cta-group">
                     <a href="#contact" class="btn-primary">Angebot sichern</a>
-                    <a href="#services" class="btn-secondary">Unsere Leistungen</a>
+                    <a href="#services" class="btn-secondary" style="color: white; border-color: white;">Unsere
+                        Leistungen</a>
                 </div>
             </div>
         </section>
 
         <section id="services">
             <div class="container">
-                <h2 class="section-title">Unsere <span class="highlight">Leistungen</span></h2>
+                <h2 class="section-title reveal">Unsere <span class="highlight">Leistungen</span></h2>
                 <div class="services-grid">
-                    <div class="service-card glass-card">
-                        <h3>Privathaushalte</h3>
-                        <p>Gründliche Reinigung Ihrer Wohnräume, Glasreinigung und Wäscheservice.</p>
+                    <div class="service-card glass-card reveal">
+                        <img src="https://images.unsplash.com/photo-1705321963943-de94bb3f0dd3?fm=jpg&q=80&w=800"
+                            alt="Privathaushalte Reinigung" class="service-image">
+                        <div class="service-content">
+                            <h3>Privathaushalte</h3>
+                            <p>Gründliche Reinigung Ihrer Wohnräume, Glasreinigung und Wäscheservice mit Blick fürs
+                                Detail.</p>
+                        </div>
                     </div>
-                    <div class="service-card glass-card">
-                        <h3>Gewerbeobjekte</h3>
-                        <p>Büros, Ladenflächen und Treppenhäuser – wir sorgen für einen glänzenden Eindruck.</p>
+                    <div class="service-card glass-card reveal">
+                        <img src="https://images.unsplash.com/photo-1718220216044-006f43e3a9b1?fm=jpg&q=80&w=800"
+                            alt="Gewerbeobjekte Reinigung" class="service-image">
+                        <div class="service-content">
+                            <h3>Gewerbeobjekte</h3>
+                            <p>Büros, Ladenflächen und Treppenhäuser – wir sorgen für einen glänzenden ersten Eindruck
+                                bei Ihren Kunden.</p>
+                        </div>
                     </div>
-                    <div class="service-card glass-card">
-                        <h3>Spezialreinigung</h3>
-                        <p>Bauendreinigung, Teppich- und Polsterreinigung nach Maß.</p>
+                    <div class="service-card glass-card reveal">
+                        <img src="https://images.unsplash.com/photo-1762333261618-d76c2d19498f?fm=jpg&q=80&w=800"
+                            alt="Spezialreinigung" class="service-image">
+                        <div class="service-content">
+                            <h3>Spezialreinigung</h3>
+                            <p>Bauendreinigung, Teppich- und Polsterreinigung nach Maß mit modernstem Equipment.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,6 +132,22 @@
                 </div>
             </section>
     </main>
+    <script>
+        // Simple Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
     <script src="tracking.js"></script>
 
     <section id="contact">
